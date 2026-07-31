@@ -1,0 +1,28 @@
+name: Test formula
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  formula:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+
+      - name: Add local tap
+        run: brew tap stackshiftCloud/tap "$GITHUB_WORKSPACE"
+
+      - name: Audit formula
+        run: brew audit --formula stackshiftCloud/tap/stackshift
+
+      - name: Install and verify
+        run: |
+          brew install stackshiftCloud/tap/stackshift
+          stackshift version | grep '1.0.2'
