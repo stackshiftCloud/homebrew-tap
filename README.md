@@ -3,7 +3,7 @@
 Install the signed StackShift CLI:
 
 ```sh
-brew install stackshiftCloud/tap/stackshift
+brew install stackshiftcloud/tap/stackshift
 ```
 
 Upgrade it with:
