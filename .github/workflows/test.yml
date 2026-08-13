@@ -25,4 +25,6 @@ jobs:
       - name: Install and verify
         run: |
           brew install stackshiftCloud/tap/stackshift
-          stackshift version | grep '1.0.2'
+          expected="$(brew info --json=v2 stackshiftCloud/tap/stackshift |
+            ruby -rjson -e 'puts JSON.parse($stdin.read)["formulae"][0]["versions"]["stable"]')"
+          stackshift version | grep "CLI[[:space:]]*$expected"
