@@ -28,3 +28,8 @@ jobs:
           expected="$(brew info --json=v2 stackshiftCloud/tap/stackshift |
             ruby -rjson -e 'puts JSON.parse($stdin.read)["formulae"][0]["versions"]["stable"]')"
           stackshift version | grep "CLI[[:space:]]*$expected"
+          binary="$(brew --prefix stackshift)/bin/stackshift"
+          if xattr -p com.apple.quarantine "$binary" >/dev/null 2>&1; then
+            echo "::error::Homebrew left the quarantine attribute on $binary"
+            exit 1
+          fi
