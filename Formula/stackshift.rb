@@ -5,23 +5,23 @@ class Stackshift < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/stackshiftCloud/stackshift-cli/releases/download/v1.0.26/stackshift_darwin_arm64.tar.gz"
-      sha256 "0e595288ddec56add7eff280c36cec1c68710a05f232362c5e5924e48c110419"
+      url "https://github.com/stackshiftCloud/stackshift-cli/releases/download/v1.0.27/stackshift_darwin_arm64.tar.gz"
+      sha256 "9b4bd6ddd50ba7f8c764f31d622bdc30c617b47c54b2be37eaaf7dc338b6731a"
     end
     on_intel do
-      url "https://github.com/stackshiftCloud/stackshift-cli/releases/download/v1.0.26/stackshift_darwin_amd64.tar.gz"
-      sha256 "4c8c764f2b0990ce13b4fbf4fe6ef3a2cfdc56b8b0effe786ecb03654d9dfc33"
+      url "https://github.com/stackshiftCloud/stackshift-cli/releases/download/v1.0.27/stackshift_darwin_amd64.tar.gz"
+      sha256 "c241330430e774b5e90da6449ae0eede4452cac305bd3214511fa05d1b253caf"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/stackshiftCloud/stackshift-cli/releases/download/v1.0.26/stackshift_linux_arm64.tar.gz"
-      sha256 "379a767874c59ff10ebfc7829d635c40a079ff5c077b3550fd70ba607179b4c2"
+      url "https://github.com/stackshiftCloud/stackshift-cli/releases/download/v1.0.27/stackshift_linux_arm64.tar.gz"
+      sha256 "a4f16444b9f39c1ba1b4f1882a70caf797bc0efedd1464799e03df9c60a013f7"
     end
     on_intel do
-      url "https://github.com/stackshiftCloud/stackshift-cli/releases/download/v1.0.26/stackshift_linux_amd64.tar.gz"
-      sha256 "c6173a559daf34e1229f190f940928e63ebab3c864667bcbd40b985de33eee82"
+      url "https://github.com/stackshiftCloud/stackshift-cli/releases/download/v1.0.27/stackshift_linux_amd64.tar.gz"
+      sha256 "4cc93bc094103607173c31d2b7a71e52446ad329a6b9b9c513e8e2493d22e344"
     end
   end
 
